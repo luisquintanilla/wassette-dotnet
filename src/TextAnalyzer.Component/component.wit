@@ -1,0 +1,23 @@
+package demo:text-analyzer;
+
+interface analyzer {
+  /// Analyzes text and returns normalized content and simple deterministic metadata.
+  record analysis {
+    /// Input after line-ending and whitespace normalization.
+    normalized: string,
+    /// Number of non-empty whitespace-delimited words.
+    word-count: u32,
+    /// Number of content lines after trimming blank outer lines.
+    line-count: u32,
+    /// Lowercase punctuation-separated identifier derived from normalized text.
+    slug: string,
+  }
+
+  /// Analyze text without accessing the filesystem, network, clock, or environment.
+  /// Returns an error for empty input or input larger than the configured limit.
+  analyze: func(input: string) -> result<analysis, string>;
+}
+
+world text-analyzer {
+  export analyzer;
+}

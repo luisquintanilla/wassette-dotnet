@@ -1,0 +1,21 @@
+{
+  "name": "Wassette .NET component",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "WASM_TOOLS_VERSION": "1.261.0",
+      "WASSETTE_VERSION": "0.8.0"
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "dotnet restore Wassette.DotNet.sln",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}

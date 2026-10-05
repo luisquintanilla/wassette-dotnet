@@ -1,0 +1,20 @@
+## .NET
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+
+## Generated component artifacts
+artifacts/
+*.wasm
+
+## Local tooling and test output
+.testagent/status.md
+TestResults/
+.DS_Store
+
+
+## Internal agent artifacts
+.testagent/
