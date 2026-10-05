@@ -112,6 +112,6 @@ not request any host capabilities.
 
 ## Public-repository notes
 
-No license is selected yet. Choose and add a license before publishing this
-scaffold publicly. Contributions should preserve the WIT contract and keep
-unit tests independent of external services.
+This repository is licensed under the MIT License. Contributions should
+preserve the WIT contract and keep unit tests independent of external
+services.
